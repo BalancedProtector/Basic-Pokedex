@@ -4,6 +4,6 @@ let pokemonList = [
     {name:'Squirtle', height: '1\' 08\"', types:['Water']},
 ] // Type format = name: 'string'; height: number; types: [arrayItem1, arrayItem2];
 let i = null;
-for (i = 0, i < pokemonList.length, i++) {
+for (i = 0; i < pokemonList.length; i++) {
     document.write(pokemonList[i]);
 }
