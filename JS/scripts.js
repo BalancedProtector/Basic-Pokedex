@@ -15,9 +15,19 @@ let pokemonList = [
     types:['Water']
     },
 ] // Type format = name: 'string'; height: number; types: [arrayItem1, arrayItem2];
+for (i = 0; i < pokemonList.length; i++) {
+    document.write(pokemonList[i].name + ' (height in meters: ' + pokemonList[i].height + ') ');
+    if (pokemonList[i].height > '1') {
+        document.write(' - Wow, that\'s a big one! ');
+    }
+    document.write('<br>');
+}
+/*
 pokemonList.forEach(pokemon => {
     document.write(pokemon.name + ' (height in meters: ' + pokemon.height + ') ');
     if (pokemon.height > '1\' 05\"') {
         document.write(' - Wow, that\'s a big one! ');
     }
+    document.write('<br>');
 });
+*/
