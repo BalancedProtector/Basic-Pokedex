@@ -1,20 +1,23 @@
 let pokemonList = [
     {
     name:'Bulbasaur', 
-    height: '2\' 04\"', 
+    height: '0.7', 
     types:['Grass','poison']
     },
     {
     name:'Charmander', 
-    height: '2\'', 
+    height: '1.7', 
     types:['Fire']
     },
     {
     name:'Squirtle', 
-    height: '1\' 08\"', 
+    height: '1', 
     types:['Water']
     },
 ] // Type format = name: 'string'; height: number; types: [arrayItem1, arrayItem2];
-for (i = 0; i < pokemonList.length; i++) {
-    document.write(pokemonList[i.name]);
-}
+pokemonList.forEach(pokemon => {
+    document.write(pokemon.name + ' (height in meters: ' + pokemon.height + ') ');
+    if (pokemon.height > '1\' 05\"') {
+        document.write(' - Wow, that\'s a big one! ');
+    }
+});
