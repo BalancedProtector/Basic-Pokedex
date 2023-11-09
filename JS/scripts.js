@@ -1,13 +1,16 @@
 let pokemonList = [
-    {name:'Bulbasaur', 
+    {
+    name:'Bulbasaur', 
     height: '2\' 04\"', 
     types:['Grass','poison']
     },
-    {name:'Charmander', 
+    {
+    name:'Charmander', 
     height: '2\'', 
     types:['Fire']
     },
-    {name:'Squirtle', 
+    {
+    name:'Squirtle', 
     height: '1\' 08\"', 
     types:['Water']
     },
