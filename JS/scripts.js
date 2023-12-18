@@ -30,7 +30,7 @@ let pokemonRepository = (function() {
 })();
 
 console.log(pokemonRepository.getAll());
-/*
+
 pokemonList.forEach(pokemon => {
     document.write(pokemon.name + ' (height in meters: ' + pokemon.height + ') ');
     if (pokemon.height > '1\' 05\"') {
@@ -41,4 +41,3 @@ pokemonList.forEach(pokemon => {
 function pokedexStructure() {
     
 }
-*/
