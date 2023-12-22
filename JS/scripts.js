@@ -16,28 +16,23 @@ let pokemonRepository = (function() {
         types:['Water']
         },
     ] // Type format = name: 'string'; height: number; types: [arrayItem1, arrayItem2];
-    function getAll() {
-        return pokemonList;
-    }
     function add(pokemon) {
         pokemonList.push(pokemon);
+    }
+    function getAll() {
+        return pokemonList;
     }
     return {
         getAll: getAll,
         add: add
     };
-
 })();
-
-console.log(pokemonRepository.getAll());
-
+/*console.log(pokemonRepository.getAll());*/
+pokemonRepository.add({name:'Pikachu', height: '0.4', types:['Electric']});
 pokemonList.forEach(pokemon => {
     document.write(pokemon.name + ' (height in meters: ' + pokemon.height + ') ');
     if (pokemon.height > '1\' 05\"') {
         document.write(' - Wow, that\'s a big one! ');
     }
     document.write('<br>');
-});
-function pokedexStructure() {
-    
-}
+})();
