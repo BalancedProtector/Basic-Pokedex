@@ -22,17 +22,23 @@ let pokemonRepository = (function() {
     function getAll() {
         return pokemonList;
     }
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector(".pokemonList");
+        let listpokemon= document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("button-class");
+        listpokemon.appendChild(button);
+        pokemonList.appendChild(listpokemon);
+    }
     return {
         getAll: getAll,
-        add: add
+        add: add,
+        addListItem: addListItem,
     };
 })();
 /*console.log(pokemonRepository.getAll());*/
 pokemonRepository.add({name:'Pikachu', height: '0.4', types:['Electric']});
 pokemonRepository.getAll().forEach(function(pokemon){
-    document.write(pokemon.name + ' (height: ' + pokemon.height + ')');
-    if (pokemon.height > 1.5) {
-        document.write(' - Wow, that\'s big!');
-    }
-    document.write('<br>');
+    pokemonRepository.addListItem(pokemon);
 });
