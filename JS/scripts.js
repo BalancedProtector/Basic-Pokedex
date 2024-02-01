@@ -17,8 +17,7 @@ let pokemonRepository = (function() {
     }
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function() {
-            function showModal(pokemon) {
-                let modalContainer = document.querySelector("#pokedexEntry");
+                let modalContainer = document.querySelector("#pokedexInfo");
                 modalContainer.innerHTML = "";
 
                 let modal = document.createElement("div");
@@ -62,8 +61,6 @@ let pokemonRepository = (function() {
                 function hideModal() {
                     modalContainer.classList.remove("is-visible");
                 }
-            }
-            
         });
     }
     function addListItem(pokemon) {

@@ -26,7 +26,7 @@
 #pokedexInfo {
     display: none;
 }
-#pokedexEntry.is-visible {
+#pokedexInfo.is-visible {
     position: fixed;
     padding: 20px;
     -webkit-box-sizing: border-box;
