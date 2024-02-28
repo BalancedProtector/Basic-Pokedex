@@ -100,7 +100,7 @@ let pokemonRepository = (function() {
         let modalTitle = $(".modal-title");
         let modalHeader = $(".modal-header");
         // Clear all existing modal content
-        // modalHeader.empoty();
+        // modalHeader.empty();
         modalTitle.empty();
         modalBody.empty();
         let nameElement = $("<h1>" + pokemon.name + "<h1>");
@@ -131,6 +131,7 @@ let pokemonRepository = (function() {
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
+        showModal: showModal,
     };
 })();
 pokemonRepository.loadList().then(function(){
